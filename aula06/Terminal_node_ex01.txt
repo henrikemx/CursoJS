@@ -1,0 +1,37 @@
+henrique@AcerE1571:~/CursoJS$ node
+Welcome to Node.js v12.13.0.
+Type ".help" for more information.
+> nome = 'Gustavo'
+'Gustavo'
+> idade = 41
+41
+> nota = 5.5
+5.5
+> 'O aluno ' + nome + ' de ' + idade + ' anos tirou nota ' + nota + '!'
+'O aluno Gustavo de 41 anos tirou nota 5.5!'
+> `O aluno ${nome}, de ${idade} anos, tirou nota ${nota} !`
+'O aluno Gustavo, de 41 anos, tirou nota 5.5 !'
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

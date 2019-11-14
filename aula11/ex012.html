@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de JavaScript - Aula 11, parte 2</title>
+    <style>
+        body{
+            font: normal 14pt Courier;
+            color: whitesmoke;
+            background: teal;
+        }
+        input{
+            width: 200px;
+
+        }
+        div#pais{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de Alfandega</h1>
+    <!--
+    Informe o país de origem: <input type="search" name="Pesquisa" id="pais">
+    -->
+    Informe o país de origem: <input type="text" name="nacionalidade" id="pais" style="text-align: right;">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id='pais'></div>
+    <script>
+        function checar(){
+            var nacion = document.getElementById('pais')
+            var res = document.querySelector('div#pais')
+            var nacao = nacion.value
+            if (nacao != 'Brasil'){
+                res.innerHTML = '<p>Voce é <strong>estrangeiro</strong> !</p>'
+            } else {
+                res.innerHTML = '<p>Voce é <strong>brasileiro</strong> !</p>'
+            }
+        }
+    </script>    
+</body>
+</html>

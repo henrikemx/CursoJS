@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de JavaScript - Aula 06</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            color: cornsilk;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Assunto: tratamento e manipulação de dados</h2>
+    <h3>Aplicação de <strong>Template String</strong></h3><br>
+
+    <script>
+        var nome = prompt('Informe um nome:')
+        document.write(`O nome informado foi ${nome} e tem ${nome.length} letras !<br>`)
+        document.write(`Este nome informado em maiúsculo: ${nome.toUpperCase()}<br>`)
+        document.write(`Este nome informado em minúsculo: ${nome.toLowerCase()}<br>`)
+
+        var valor = Number(prompt('Informe um valor qualquer:'))
+        document.write(`O valor informado foi de ${valor.toLocaleString('pt-BR',{style:'currency', currency:'BRL'})}<br>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de JavaScript - Aula 09</title>
+    <style>
+        Body{
+            font: normal 14pt Courier New;
+            color: whitesmoke;
+            background-color: darkslategrey;
+        }
+        h1{
+            color: green;
+        }
+        p{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 09 - Introdução ao <strong>DOM</strong></h1><br>
+    
+    <p>Aqui começa a aula...<br></p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript<br></p>
+
+    <! Abaixo podemos localizar uma determinada div por seu Id,Name/Class >
+    <div id='msg' name='nome' class='classe'>Clique aqui...</div>
+
+    <script>
+        
+        /*
+        // Aqui está apresentado os primeiros exemplos...
+        var p1 = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+
+        window.document.write('getElementsByTagName(1º parágrafo) => ' + p1.innerText + '<br><br>')
+        window.document.write('getElementsByTagName(2º parágrafo) => ' + p2.innerText + '<br><br>')
+
+        // Abaixo segue um exemplo de representação da árvore hierárquica do DOM
+        window.document.write('Olá, Mundo !!<br>')
+        window.document.write(window.document.charset + ' => emprego de charset<br>')
+        window.document.write(window.navigator.appName + ' => identidade do navegador<br>')
+        window.document.write(window.document.URL + ' => mostra a URL da página...<br>')
+
+        document.write('Empregando "innerHTML" => ' + p2.innerHTML + '<br><br>')
+        */
+
+       
+        var ident = document.getElementById('msg')
+        var nome = document.getElementsByName('nome')[0]
+        var classe = document.getElementsByClassName('classe')[0]
+
+        // Abaixo um exemplo de código usando getElementById() para alterar a cor do texto
+        // ident.style.background = 'blue'
+        ident.innerText = 'Teste'
+ 
+        // Abaixo um exemplo de código usando getElementsByname()...
+        //nome.innerText = 'Tuuuudo Azul !!'
+
+        // Abaixo outro exemplo empregando getElementsByClass...
+        // classe.innerHTML = '<strong>Última chance !!</strong>'
+        
+
+        /* Abaixo, uma forma de empregar querySelector()
+            esse recurso só é permitido para 'Id" e 'class'
+        qsmsg = document.querySelector('div#msg')
+        qsclasse = document.querySelector('div.classe')
+
+        qsmsg.style.color = 'blue'
+        qsclasse.innerHTML = '<strong>querySelector()</strong>' */
+
+        /*================================================================*/
+        // Abaixo uma opção para exibição em uma janela de aviso...
+        // window.alert('Empregando "innerHTML" => ' + p2.innerHTML)
+
+        /* Descomentar aqui para funcionalizar os códigos abaixo...
+        // Aqui vai o exemplo que permite alterar a cor de fundo do 1º parágrafo
+        p1.style.color = 'blue'
+
+        // Aqui vai o exemplo que permite alterar a cor de fundo da página
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+        */
+
+    </script>
+
+</body>
+</html>

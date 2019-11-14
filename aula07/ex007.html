@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de JavaScript - Aula 07, parte 2</title>
+    <style>
+        body{
+            font: normal 14pt Courier;
+            color: wheat;
+            background-color: darkslategrey;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /* No exemplo abaixo, são informados 4 valores, os quais serão utilizados nos testes abaixo*/
+
+        document.write('Emprego do uso de operadores relacionais: <br><br>')
+
+        var n1 = Number(prompt(`Informe 1º valor:`))
+        var n2 = Number(prompt(`Informe 2º valor:`))
+        var n3 = Number(prompt(`Informe 3º valor:`))
+        var n4 = Number(prompt(`Informe 4º valor:`))
+
+        document.write(`${n1} > ${n2} (${n1>n2})<br>`)
+        document.write(`${n1} < ${n2} (${n1<n2})<br>`)
+        document.write(`${n1} >= ${n2} (${n1>=n2})<br>`)
+        document.write(`${n1} <= ${n2} (${n1<=n2})<br>`)
+        document.write(`${n1} == ${n3} (${n1==n3})<br>`)
+        document.write(`${n1} != ${n3} (${n1!=n3})<br><br>`)
+
+        document.write('Agora empregando operador de igualdade restrito...<br><br>')
+        document.write(`${n1} === ${n3}   (${n1===n3}), mesmo tipo<br>`)
+        document.write(`${n1} === '${n3}' (${n1===n3.toString}), tipos diferentes<br><br>`)
+
+        document.write('Agora empregando operador de desigualdade restrito...<br><br>')
+        document.write(`${n1} !== '${n3}' (${n1!==n3.toString}), tipos diferentes<br><br>`)
+
+        document.write('Exemplos do uso de Operadores Lógicos...<br><br>')
+        document.write(`${n1} > ${n2} && ${n2} % ${n3} == ${n4}... essa expressão é ${n1 > n2 && n2 % n3 == n4}<br>`)
+        document.write(`${n1} <= ${n2} || ${n2} / ${n3} == ${n3}... essa expressão é ${n1 <= n2 || n2 / n3 == n3}<br><br>`)
+
+        /* Aqui segue a segunda parte do vídeo onde foi explicado sobre os operadores condicionais e ternários*/
+
+        var idade = Number(prompt('Informe a idade desejada:'))
+
+        var estado = prompt('Informe a sigla do Estado da pesquisa:')
+
+        var salario = Number(prompt('Informe o valor do salário:'))
+        var sexo = prompt('Informe o sexo [M/F]')
+
+        document.write('Outros exemplos do emprego de operadores relacionais com operadores lógicos<br><br>')
+
+        document.write(`Condição testada: idade >= 15 && idade <= 17<br>`)
+        document.write(`A idade informada (${idade}) está entre 15 e 17 ?<br>`)
+        /* No exemplo abaixo, além de executar o teste condicional, ainda é utilizado o Operador Ternário para converter 'true/false'
+           em 'SIM/NÃO'*/
+        document.write(`Resposta: ${idade >= 15 && idade <= 17?'SIM':'NÃO'}<br><br>`)
+
+        document.write(`Condição testada: Estado == RJ || Estado == SP.<br>`)
+        document.write(`O estado informado (${estado.toUpperCase()}) é SP ou RJ ?<br>`)
+        /* No exemplo abaixo, além de executar o teste condicional, ainda é utilizado o Operador Ternário para converter 'true/false'
+           em 'SIM/NÃO'*/
+        document.write(`Resposta: ${estado.toUpperCase() == 'RJ' || estado.toUpperCase() == 'SP'?'SIM':'NÃO'}<br><br>`)
+
+        document.write(`Condição testada: Salário > 1500,00 && Sexo != M.<br>`)
+        document.write(`O salário informado (${salario.toFixed(2).replace('.',',')}) é acima de 1500,00 e o sexo informado (${sexo.toUpperCase()}) NÃO é homem ?<br>`)
+        /* No exemplo abaixo, além de executar o teste condicional, ainda é utilizado o Operador Ternário para converter 'true/false'
+           em 'SIM/NÃO'*/
+        document.write(`Resposta: ${salario.toFixed(2) > 1500.00 && sexo.toUpperCase() != 'M'?'SIM':'NÃO'}<br>`)
+
+    </script>    
+</body>
+</html>

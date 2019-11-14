@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de JavaScript - Aula 10</title>
+    <style>
+        body{
+            font: normal 14pt Courier New;
+            color: whitesmoke;
+            background-color: teal;
+        }
+        input{
+            font: italic 14pt Verdana;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1" style="text-align: right;"> + <br>
+    <input type="number" name="txtn2" id="txtn2" style="text-align: right;">
+    <input type="button" value="somar" onclick="somar()">
+    <div id='res'>Resultado</div>
+    <script>
+        function somar(){
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var res = document.getElementById('res')
+            // ambas as técnicas acima funcionam da mesma forma
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            
+            //res.innerHTML = `${n1} + ${n2} = <strong>${s}</strong><br>`
+            res.innerHTML = `Resultado: <strong>${s}</strong><br>`
+        }
+    </script>
+    
+</body>
+</html>
